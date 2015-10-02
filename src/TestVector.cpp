@@ -26,22 +26,6 @@
 
 using namespace celero;
 
-///
-/// \class Impl
-///
-class celero::TestVector::Impl
-{
-	public:
-		Impl() : 
-			testVectorMutex(),
-			testVector()
-		{
-		}
-
-		mutable std::mutex testVectorMutex;
-		std::vector<std::shared_ptr<Benchmark>> testVector;
-};
-
 TestVector::TestVector() : pimpl()
 {
 }
